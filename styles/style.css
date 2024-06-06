@@ -549,9 +549,10 @@ footer {
     height: 65px;
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: space-between;
     border-top: 1px solid #444;
     font-size: 12px;
+
 }
 
 .backTopBtn {
