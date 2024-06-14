@@ -54,6 +54,7 @@ body {
     position: sticky;
     background-color: #fff;
     z-index: 10;
+    border-bottom: 2px solid rgb(220, 220, 220);
 }
 
 .large {
@@ -83,7 +84,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.menuButtons li, .menuSearch {
+.menuButtons li, .menuSearch{
     display: inline-flex;
     align-items: center;
     min-height: inherit;;
@@ -94,7 +95,16 @@ body {
     cursor: pointer;
 }
 
-.menuButtons li:hover, .menuSearch:hover, .button-menu:hover {
+.menuItem {
+    color: inherit;
+}
+
+.mnActive {
+    color: #149DD2;
+    border-bottom: 2px solid #149DD2;
+}
+
+.menuButtons li:hover, .menuSearch:hover, .button-menu:hover, .menuItem:hover {
     color: #149DD2;
 }
 
@@ -476,6 +486,108 @@ blockquote::before {
     justify-content: space-between;
 }
 
+
+.content-cursos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 150px 100px 100px 100px;
+    grid-template-areas: 
+        "title search"
+        "courses comments"
+        "courses files"
+        "courses categories";
+    gap: 10px;
+    width: 100%;
+}
+
+.content-cursos .title {
+    grid-area: title;
+}
+
+.content-cursos .title h1{
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.content-cursos .search {
+    display: grid;
+    grid-area: search; 
+    justify-items: center;
+    align-items: center;
+}
+
+.content-cursos .comments {
+    grid-area: comments; 
+    justify-items: center;
+}
+
+.content-cursos .files {
+    grid-area: files; 
+    justify-items: center;
+}
+
+.content-cursos .categories {
+    grid-area: categories; 
+    justify-items: center;
+}
+
+.content-cursos .courses {
+    grid-area: courses; 
+    justify-items: center;
+}
+
+.box {
+
+    padding: 20px;
+    width: 85%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .07);
+    border: 1px solid #e7e7e7;
+    border-radius: 7px;
+}
+
+.box input {
+    background-color: #f5f5f5;
+    color: #000;
+    border: 1px solid #e7e7e7;
+    border-radius: 7px 0 0 7px;
+    height: 36px;
+    font-size: 14px;
+    outline: none;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.box input::placeholder {
+    color: #898989;
+}
+
+.box button {
+    background-color: #fff;
+    color: #898989;
+    border: 2px solid #898989;
+    border-radius: 0 7px 7px 0;
+    /* padding: 10px; */
+    height: 40px;
+    position: relative;
+    left: -6px;
+    top: -1px;
+    font-size: 12px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box button:hover {
+    background-color: #898989;
+    color: #fff;
+}
+
+.m-top {
+    margin-top: 70px;
+}
 
 footer {
     background-color: #333;
