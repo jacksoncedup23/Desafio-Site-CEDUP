@@ -19,24 +19,24 @@
     <div class="topBar">
         <div class="content auto-row-col spcBetween ">
             <div class="topBar-left">Siga-nos em nossas redes sociais</div>
-                <div class="topBar-right">
-                    <div class="topBar-Icon">
-                        <i class="fa-brands fa-instagram"></i>
-                        <!-- <img class="IconImage" src="images/instagram.png" alt="Instagram"> -->
-                    </div>
-                    <div class="topBar-Icon">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        <!-- <img class="IconImage" src="images/linkedin.png" alt="Linkedin"> -->
-                    </div>
-                    <div class="topBar-Icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <!-- <img class="IconImage" src="images/facebook.png" alt="Facebook"> -->
-                    </div>
+            <div class="topBar-right">
+                <div class="topBar-Icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <!-- <img class="IconImage" src="images/instagram.png" alt="Instagram"> -->
+                </div>
+                <div class="topBar-Icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <!-- <img class="IconImage" src="images/linkedin.png" alt="Linkedin"> -->
+                </div>
+                <div class="topBar-Icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <!-- <img class="IconImage" src="images/facebook.png" alt="Facebook"> -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="navbar" >
+    </div>
+    <div class="navbar">
         <div id="navbar" class="content spcBetween">
             <div class="navLogo">
                 <img class="navLogoImage" src="images/logo-cedup-timbo.png" alt="CEDUP Timbó">
@@ -62,110 +62,213 @@
     </div>
     <!-- -------------------------------------------------------------------------------------------------- -->
 
-    <div class="content m-top">
+    <div class="content m-top mb">
         <div class="content-cursos">
             <div class="title">
                 <h1>Cursos</h1>
+                <div class="drop-down">
+                    <div class="menuContent" onmouseenter="document.getElementById('menuCat').classList.add('show')" onmouseleave="document.getElementById('menuCat').classList.remove('show')">
+                        <div class="btn">
+                            <div class="showCategories">
+                                <span class="btnCatTxt">
+                                    Categoria
+                                </span>
+                                <i class="btnCat fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <ul id="menuCat" class="menuCat">
+                            <a class="mnLink" href="#" onclick="document.getElementById('menuCat').classList.remove('show')"><li class="liLink">Todos</li></a>
+                            <a class="mnLink" href="#engenharias" onclick="document.getElementById('menuCat').classList.remove('show')"><li class="liLink">Engenharias</li></a>
+                            <a class="mnLink" href="#exatas" onclick="document.getElementById('menuCat').classList.remove('show')"><li class="liLink">Exatas</li></a>
+                            <a class="mnLink" href="#sociais" onclick="document.getElementById('menuCat').classList.remove('show')"><li class="liLink">Sociais</li></a>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
             <div class="search">
                 <div class="box">
-                    <input type="text" placeholder="Pesquisar">
-                    <button>PESQUISAR</button>
+                    <div class="boxContent">
+                        <input type="text" placeholder="Pesquisar">
+                        <button>PESQUISAR</button>
+                    </div>
                 </div>
             </div>
             <div class="comments">
                 <div class="box">
-                    
+                    <h2>COMENTÁRIOS</h2>
+                    <button onclick="addComment()">+</button>
+                    <div id="listaComments" class="boxContent">
+                        
+                    </div>
                 </div>
             </div>
             <div class="files">
-
+                <div class="box">
+                    <h2>ARQUIVOS</h2>
+                    <div class="boxContent">
+                    </div>
+                </div>
             </div>
             <div class="categories">
+                <div class="box">
+                    <h2>CATEGORIAS</h2>
+                    <div class="boxContent">
+                        <ul>
+                            <li><a class="links" href="#">Todas</a></li>
+                            <li><a class="links" href="#engenharias">Engenharias</a></li>
+                            <li><a class="links" href="#exatas">Exatas</a></li>
+                            <li><a class="links" href="#sociais">Sociais</a></li>
 
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="courses">
+                <div class="course">
+                    <div>
+                        <img class="courseImage" src="images/Segurança-do-Trabalho-360x224.jpg" alt="">
+                    </div>
+                    <div class="courseContent">
+                        <div class="courseTitle">
+                            Técnico em Segurança no Trabalho
+                        </div>
+                        <div class="courseDesc">
+                            Hoje é um dos profissionais mais solicitado nas empresas, pela sua importância na prevenção
+                            de acidentes e doenças no trabalho,
+                        </div>
+                    </div>
+                    <div class="courseBoxFooter">
+                        <div class="courseFooter">
+                            <a href="#">
+                                <div class="shareButton">
+                                    <img class="IconImage" src="images/share.png" alt="Compartilhar">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div>
+                        <img class="courseImage" src="images/Eletrônica-360x224.jpg" alt="">
+                    </div>
+                    <div class="courseContent">
+                        <div class="courseTitle">
+                            Técnico em Eletrônica
+                        </div>
+                        <div class="courseDesc">
+                            O técnico industrial com habilitação em eletrônica, utiliza princípios e teorias das
+                            ciências exatas para executar e elaborar
+                        </div>
+                    </div>
+                    <div class="courseBoxFooter">
+                        <div class="courseFooter">
+                            <a href="#">
+                                <div class="shareButton">
+                                    <img class="IconImage" src="images/share.png" alt="Compartilhar">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div>
+                        <img class="courseImage" src="images/Informática-360x224.jpg" alt="">
+                    </div>
+                    <div class="courseContent">
+                        <div class="courseTitle">
+                            Técnico em Desenvolvimento de Software
+                        </div>
+                        <div class="courseDesc">
+                            Profissional capacitado em projetar, desenvolver e implementar sistemas computacionais,
+                            abrange as áreas de software, hardware,
+                        </div>
+                    </div>
+                    <div class="courseBoxFooter">
+                        <div class="courseFooter">
+                            <a href="#">
+                                <div class="shareButton">
+                                    <img class="IconImage" src="images/share.png" alt="Compartilhar">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div>
+                        <img class="courseImage" src="images/Adminitração-360x224.jpg" alt="">
+                    </div>
+                    <div class="courseContent">
+                        <div class="courseTitle">
+                            Técnico em Administração
+                        </div>
+                        <div class="courseDesc">
+                            Profissional apto e qualificado para administrar qualquer área de uma organização, tendo em
+                            vista a abordagem de todas as áreas.
+                        </div>
+                    </div>
+                    <div class="courseBoxFooter">
+                        <div class="courseFooter">
+                            <a href="#">
+                                <div class="shareButton">
+                                    <img class="IconImage" src="images/share.png" alt="Compartilhar">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="course">
+                    <div>
+                        <img class="courseImage" src="images/radiologia-360x224.png" alt="">
+                    </div>
+                    <div class="courseContent">
+                        <div class="courseTitle">
+                            Técnico em Radiologia
+                        </div>
+                        <div class="courseDesc">
+                            O técnico em radiologia é um profissional que tem a função de realizar diversos procedimentos de radiologia através de uma diversa gama de serviços na área radiológica.
+                        </div>
+                    </div>
+                    <div class="courseBoxFooter">
+                        <div class="courseFooter">
+                            <a href="#">
+                                <div class="shareButton">
+                                    <img class="IconImage" src="images/share.png" alt="Compartilhar">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course">
+                    <div>
+                        <img class="courseImage" src="images/agropecuaria-360x224.png" alt="">
+                    </div>
+                    <div class="courseContent">
+                        <div class="courseTitle">
+                            Técnico em Agropecuária
+                        </div>
+                        <div class="courseDesc">
+                            O técnico em agropecuária é uma formação no qual se obtém conhecimentos para atuação em diversas áreas da agropecuária.
+                        </div>
+                    </div>
+                    <div class="courseBoxFooter">
+                        <div class="courseFooter">
+                            <a href="#">
+                                <div class="shareButton">
+                                    <img class="IconImage" src="images/share.png" alt="Compartilhar">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
         </div>
     </div>
 
-    <div class="section2">
-        <div class="content spcBetween courses">
-            <div class="course">
-                <div >
-                    <img class="courseImage" src="images/Adminitração-360x224.jpg" alt="">
-                </div>
-                <div class="courseContent">
-                    <div class="courseTitle">
-                        Técnico em Administração
-                    </div>
-                    <div class="courseDesc">
-                        Profissional apto e qualificado para administrar qualquer área de uma organização, tendo em vista a abordagem de todas as áreas.
-                    </div>
-                </div>
-                <div class="courseFooter">
-                    <a href="#">
-                        <div class="shareButton">
-                            <img class="IconImage" src="images/share.png" alt="Compartilhar">
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="course course-2">
-                <div >
-                    <img class="courseImage" src="images/Informática-360x224.jpg" alt="">
-                </div>
-                <div class="courseContent">
-                    <div class="courseTitle">
-                        Técnico em Desenvolvimento de Software
-                    </div>
-                    <div class="courseDesc">
-                        Profissional capacitado em projetar, desenvolver e implementar sistemas computacionais, abrange as áreas de software e hardware.
-                    </div>
-                </div>
-                <div class="courseFooter">
-                    <a href="#">
-                        <div class="shareButton">
-                            <img class="IconImage" src="images/share.png" alt="Compartilhar">
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="course course-3">
-                <div >
-                    <img class="courseImage" src="images/Eletrônica-360x224.jpg" alt="">
-                </div>
-                <div class="courseContent">
-                    <div class="courseTitle">
-                        Técnico em Eletrônica
-                    </div>
-                    <div class="courseDesc">
-                        O técnico industrial com habilitação em eletrônica, utiliza princípios e teorias das ciências exatas para executar e elaborar
-                    </div>
-                </div>
-                <div class="courseFooter">
-                    <a href="#">
-                        <div class="shareButton">
-                            <img class="IconImage" src="images/share.png" alt="Compartilhar">
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-            
-        </div>
-        <div class="bannerSelector">
-            <span class="selected"></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
 
 
     <!-- -------------------------------------------------------------------------------------------------- -->
@@ -183,21 +286,34 @@
             <div class="widget">
                 <h3>SOBRE NÓS</h3>
                 <div class="widget-content">
-                    <p>O CEDUP de Timbó iniciou suas atividades na qualidade de extensão do CEDUP Hermann Hering de Blumenau em março de 2000 com o curso técnico em Gestão com habilitação em Administração e Técnico Industrial com habilitação em Eletrônica, com total de 60 alunos.</p>
+                    <p>O CEDUP de Timbó iniciou suas atividades na qualidade de extensão do CEDUP Hermann Hering de
+                        Blumenau em março de 2000 com o curso técnico em Gestão com habilitação em Administração e
+                        Técnico Industrial com habilitação em Eletrônica, com total de 60 alunos.</p>
                     <p><a class="footerLink" href="#">Veja mais</a></p>
                 </div>
             </div>
             <div class="widget">
-                
+
             </div>
         </div>
         <div class="content footerCopy">
             <div class="copy">
                 <a class="footerLink" href="#">CEDUP TIMBÓ</a> © 2019
             </div>
-            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="backTopBtn"><i class="fa-solid fa-angle-up"></i></button>
+            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="backTopBtn"><i
+                    class="fa-solid fa-angle-up"></i></button>
         </div>
     </footer>
+
+    <script>
+        function addComment() {
+            var txt = prompt("Escreva um comentário!");
+            var lista  = document.getElementById("listaComments").innerHTML;
+            lista = lista +"<div class='comment'>"+txt+"</div>";
+            document.getElementById("listaComments").innerHTML = lista;
+        }
+    
+    </script>
 </body>
 
 

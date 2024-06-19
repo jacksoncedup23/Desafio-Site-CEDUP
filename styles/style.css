@@ -325,7 +325,17 @@ body {
     padding: 0 0px;
     border: 1px solid #e7e7e7;
     border-radius: 10px;
+    height: 100%;
+    position: relative;
 }
+
+/* .course {
+    BACKUP PARA A PAGINA INICIAL
+    max-width: 360px;
+    padding: 0 0px;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+} */
 
 
 .courseContent {
@@ -352,6 +362,14 @@ body {
     width: 330px;
     font-size: 0.9em;
     color: #555555;
+    margin-bottom: 30px;
+}
+
+.courseBoxFooter {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-top: 30px;
 }
 
 .courseFooter {
@@ -359,6 +377,7 @@ body {
     justify-content: end;
     border-top: 2px solid #e7e7e7;
     height: 47px;
+    
     /* padding: 10px 20px; */
 }
 
@@ -490,12 +509,12 @@ blockquote::before {
 .content-cursos {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 150px 100px 100px 100px;
     grid-template-areas: 
         "title search"
+        "courses categories"
         "courses comments"
         "courses files"
-        "courses categories";
+        "courses others";
     gap: 10px;
     width: 100%;
 }
@@ -512,10 +531,8 @@ blockquote::before {
 }
 
 .content-cursos .search {
-    display: grid;
     grid-area: search; 
     justify-items: center;
-    align-items: center;
 }
 
 .content-cursos .comments {
@@ -535,13 +552,13 @@ blockquote::before {
 
 .content-cursos .courses {
     grid-area: courses; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
 }
 
 .box {
-
-    padding: 20px;
-    width: 85%;
+    width: 100%;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .07);
     border: 1px solid #e7e7e7;
     border-radius: 7px;
@@ -565,8 +582,8 @@ blockquote::before {
 
 .box button {
     background-color: #fff;
-    color: #898989;
-    border: 2px solid #898989;
+    color: #149dd2;
+    border: 2px solid #149dd2;
     border-radius: 0 7px 7px 0;
     /* padding: 10px; */
     height: 40px;
@@ -581,8 +598,102 @@ blockquote::before {
 }
 
 .box button:hover {
-    background-color: #898989;
+    background-color: #149dd2;
     color: #fff;
+}
+
+.box h2 {
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+    padding: 10px 18px;
+    border-bottom: 1px solid #e7e7e7;;
+}
+
+.boxContent {
+    padding: 10px 20px;
+    color: #555555;
+    min-height: 50px;
+}
+
+.links {
+    text-decoration: none;
+    color: #149DD2;
+    cursor: pointer;
+}
+
+.mnLink {
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+}
+
+
+.liLink:hover {
+    color: #149DD2;
+}
+
+.drop-down {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+.menuContent {
+    width: 150px;
+}
+.menuCat {
+    width: 125px;
+    margin: 0 auto;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    padding: 0 10px;
+    list-style: none;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+}
+
+.drop-down ul li{
+    padding: 5px 0;
+}
+
+.show{
+    display: block;
+}
+
+.comment {
+    background-image: url(../images/post-it.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 230px;
+    padding: 50px 50px 40px 20px;
+}
+
+.drop-down .btn {
+    
+    width: 145px;
+    margin: 0 auto;
+}
+
+.drop-down .btn div{
+    border: 1px solid #e7e7e7;
+    border-radius: 7px;
+}
+
+.btnCatTxt {
+    padding: 10px;
+}
+
+.drop-down .btn i{
+    border-left: 1px solid #e7e7e7;
+    height: 100%;
+    padding: 10px;
+}
+
+
+.search .box {
+    padding: 20px 0;
 }
 
 .m-top {
@@ -676,6 +787,10 @@ footer {
     height: 25px;
     border-left: 1px solid #444;
     cursor: pointer;
+}
+
+.mb {
+    margin-bottom: 3em;
 }
 
 @media (max-width: 1260px) {
