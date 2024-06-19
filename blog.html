@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <title>CEDUP Timbó - Centro de Educação Profissional</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/style.css'>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <script src='main.js'></script>
+
+    <script src="https://kit.fontawesome.com/5a76287221.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="topBar">
+        <div class="content auto-row-col spcBetween ">
+            <div class="topBar-left">Siga-nos em nossas redes sociais</div>
+            <div class="topBar-right">
+                <div class="topBar-Icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <!-- <img class="IconImage" src="images/instagram.png" alt="Instagram"> -->
+                </div>
+                <div class="topBar-Icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <!-- <img class="IconImage" src="images/linkedin.png" alt="Linkedin"> -->
+                </div>
+                <div class="topBar-Icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <!-- <img class="IconImage" src="images/facebook.png" alt="Facebook"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="navbar">
+        <div id="navbar" class="content spcBetween">
+            <div class="navLogo">
+                <img class="navLogoImage" src="images/logo-cedup-timbo.png" alt="CEDUP Timbó">
+            </div>
+            <div class="navMenu">
+                <div class="menuButtons menu1">
+                    <ul>
+                        <li><a class="menuItem" href="index.html">INICIO</a></li>
+                        <li><a class="menuItem" href="cursos.html">CURSOS</a></li>
+                        <li class="mnActive"><a class="menuItem" href="blog.html">BLOG</a></li>
+                        <li><a class="menuItem" href="contato.html">CONTATO</a></li>
+                    </ul>
+                </div>
+                <div class="menuSearch menu1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- <img class="IconImage" src="images/search.png" alt="Buscar"> -->
+                </div>
+                <div class="button-menu menu2">
+                    <img class="IconImage" src="images/btnMenu.png" alt="Buscar">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------------- -->
+
+    <div class="content m-top mb">
+        <div class="content-cursos">
+            <div class="title">
+                <h1>Página em construção</h1>
+                
+            </div>
+            <div class="search">
+                <div class="box">
+                    <div class="boxContent">
+                        <input  type="text" placeholder="Pesquisar">
+                        <button class="serach-btn">PESQUISAR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comments">
+                <div class="box">
+                    <h2>COMENTÁRIOS</h2>
+                    <button class="addCommentBtn" onclick="addComment()">Novo </button>
+                    <div id="listaComments" class="boxContent">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="files">
+                <div class="box">
+                    <h2>ARQUIVOS</h2>
+                    <div class="boxContent">
+                    </div>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="box">
+                    <h2>CATEGORIAS</h2>
+                    <div class="boxContent">
+
+                    </div>
+                </div>
+            </div>
+            <div class="courses">
+                <img class="img-nao-encontrado" src="./images/pagina_em.png" alt=" Página em construção">
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <footer>
+        <div class="content spcBetween align-top">
+            <div class="widget">
+                <ul>
+                    <li><a class="footerLink" href="#">Início</a></li>
+                    <li><a class="footerLink" href="#">História</a></li>
+                    <li><a class="footerLink" href="#">Logo</a></li>
+                    <li><a class="footerLink" href="#">Cursos</a></li>
+                    <li><a class="footerLink" href="#">Documentação necessária</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3>SOBRE NÓS</h3>
+                <div class="widget-content">
+                    <p>O CEDUP de Timbó iniciou suas atividades na qualidade de extensão do CEDUP Hermann Hering de
+                        Blumenau em março de 2000 com o curso técnico em Gestão com habilitação em Administração e
+                        Técnico Industrial com habilitação em Eletrônica, com total de 60 alunos.</p>
+                    <p><a class="footerLink" href="#">Veja mais</a></p>
+                </div>
+            </div>
+            <div class="widget">
+
+            </div>
+        </div>
+        <div class="content footerCopy">
+            <div class="copy">
+                <a class="footerLink" href="#">CEDUP TIMBÓ</a> © 2024 - Desenvolvido por <a class="footerLink" href="https://github.com/jacksoncedup23">Jackson Eduardo da Veiga</a>
+            </div>
+            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="backTopBtn"><i
+                    class="fa-solid fa-angle-up"></i></button>
+        </div>
+    </footer>
+
+    <script>
+        function addComment() {
+            var txt = prompt("Escreva um comentário!");
+            if (txt.replace(" ","").length>1) {
+                var lista  = document.getElementById("listaComments").innerHTML;
+                lista = "<div class='comment'>"+txt+"</div>"+lista ;
+                document.getElementById("listaComments").innerHTML = lista;    
+            }
+            
+        }
+    
+    </script>
+</body>
+
+
+
+</html>
