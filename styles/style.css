@@ -580,7 +580,7 @@ blockquote::before {
     color: #898989;
 }
 
-.box button {
+.serach-btn {
     background-color: #fff;
     color: #149dd2;
     border: 2px solid #149dd2;
@@ -597,10 +597,33 @@ blockquote::before {
     transition: 0.3s;
 }
 
-.box button:hover {
+.serach-btn:hover {
     background-color: #149dd2;
     color: #fff;
 }
+
+.addCommentBtn {
+    background-color: #fff;
+    color: #149dd2;
+    border: 2px solid #149dd2;
+    border-radius: 7px;
+    /* padding: 10px; */
+    height: 40px;
+    width: 70px;
+    font-size: 12px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+    transition: 0.3s;
+}
+
+.addCommentBtn:hover {
+    background-color: #149dd2;
+    color: #fff;
+}
+
+
 
 .box h2 {
     font-size: 14px;
@@ -793,6 +816,11 @@ footer {
     margin-bottom: 3em;
 }
 
+.img-nao-encontrado {
+    width: 80%;
+    margin: auto;
+}
+
 @media (max-width: 1260px) {
     .content {
         max-width: 940px;
@@ -811,6 +839,12 @@ footer {
     .sobreCedup {
         margin-left: 25px;
         margin-right: 25px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .content-cursos .courses {  
+        grid-template-columns: 1fr;
     }
 }
 
